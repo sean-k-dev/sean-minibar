@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<link rel="icon" href="https://uxwing.com/wp-content/themes/uxwing/download/20-food-and-drinks/drink.png">
+
+		<title>Sean's Minibar</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">	
+			<img class="tree" src="img/coconut-tree.png">
+			<h1>Sean's Minibar</h1>
+			<h2>Feeling thirsty? What would you like?</h2>
+			<input type="text" placeholder="Search for a beverage" id="nameField">
+			<button id="searchName">Search</button>
+			<button id="randomDrink">Surprise Me!</button>
+			<span class="subtitleOne">Select a drink to view information:</span>
+			<span class="subtitleTwo">Chosen drink:</span>
+			<ul id="drinksList"></ul>
+			<div class="drinkinfo">
+				<img id="drinkThumb" src="">			
+				<span id="drinkName"></span>
+				<span class="drink_subhead">Alcoholic: </span>
+				<span id="hasAlcohol"></span>
+				<span class="drink_subhead">Serve in:</span>
+				<span id="glassType"></span>
+				<span class="drink_subhead ingredients">Ingredients</span>
+				<ul id="ingredientsList"></ul>
+				<p id="instructions"></p>
+			</div>
+			
+		</div>
+		<div class="signature">
+			<h5>Made by Sean <a href="https://twitter.com/SeanIshigami">@SeanIshigami</a></h5>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,250 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Grape+Nuts&family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  background: rgb(255,171,0);
+  background: radial-gradient(circle, rgba(255,171,0,1) 12%, rgba(80,100,115,0.865983893557423) 53%, rgba(25,26,31,1) 100%);
+  background: url(https://images.pexels.com/photos/219998/pexels-photo-219998.jpeg?cs=srgb&dl=pexels-pixabay-219998.jpg&fm=jpg);
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  height: 800px;
+  width: 50%;
+  margin: 10vh 25% 10vh 25%;
+  background-color: rgb(213, 236, 198);
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 100px 100px 50px 50px 500px;
+  grid-template-areas: 
+  "title title title title title"
+  "subtitle subtitle subtitle subtitle subtitle"
+  "search search search search search"
+  "subheading subheading subheading subheading subheading"
+  "section section section section section";
+  border: 10px solid rgb(180, 90, 30);
+  border-radius: 10%;
+  opacity: 0.9
+}
+
+@media screen and (max-width: 1920px) {
+  .container {
+    margin: 10vh 17.5% 10vh 17.5%;
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    margin: 10vh 10% 10vh 10%;
+    width: 80%;
+  }
+}
+
+.container::before {
+  border: 15px solid rgb(168, 121, 78);
+}
+
+.tree {
+  display: inline-block;
+  margin-left: 50%;
+  height: 90%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+h1 {
+  font-family: "Grape Nuts", "Garamond", serif;
+  font-weight: 700;
+  font-size: 60px;
+  width: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  text-align: left;
+  padding-top: 18px;
+}
+
+h2 {
+  font-family: "Caveat", "Garamond", serif;
+  font-weight: 400;
+  font-size: 50px;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  text-align: center;
+}
+
+input {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-left: 5%;
+  font-size: 20px;
+  caret-color: rgb(180, 90, 30);
+}
+
+button {
+  margin-right: 10%;
+  font-size: 20px;
+}
+
+.subtitleOne {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.subtitleTwo {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+ul {
+  font-size: 28px;
+  margin: 30px 0 60px 10%;
+  overflow-y: scroll;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: rgb(180, 90, 30);
+  font-weight: 700;
+}
+
+li {
+  border-top: 1px solid rgb(180, 90, 30);
+  border-bottom: 1px solid rgb(180, 90, 30);
+  padding: 5px 0;
+}
+
+li:hover {
+  background-color: rgb(180, 90, 30);
+  color: white;
+  cursor: pointer;
+}
+
+.drinkinfo {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  margin: 30px 5% 10% 5%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 10% 10% 32.5% 22.5%;
+  grid-template-areas: 
+  "drink drink drink"
+  "details details details"
+  "ingredients ingredients ingredients"
+  "instructions instructions instructions";
+  opacity: 0;
+}
+
+#drinkName {
+  font-size: 42px;
+  font-family: "Caveat", "Garamond", serif;
+  font-weight: 700;
+  padding-top: 20px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  color: rgb(180, 90, 30);
+  display: inline-block;
+}
+
+.drinkinfo span {
+  padding-top: 0px;
+}
+
+#drinkThumb {
+  height: 90%;
+  width: auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid rgb(180, 90, 30);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.drink_subhead {
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#hasAlcohol, #glassType {
+  padding-top: 4px;
+  font-size: 20px;
+}
+
+.ingredients {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-top: 1px solid black;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#ingredientsList {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 5px 0 0 0;
+  border-bottom: 1px solid black;
+}
+
+#ingredientsList li {
+  font-size: 20px;
+  border-top: none;
+}
+
+#ingredientsList li:first-child {
+  border-top: 1px solid rgb(180, 90, 30);
+}
+
+#instructions {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  font-size: 22px;
+  overflow-y: scroll;
+  margin: 15px 0 5px 0;
+}
+
+.signature {
+  margin: 5% auto 0 auto;
+  width: 100%;
+}
+
+.signature h5 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px black;
+  font-weight: 700;
+}
+
+.signature a {
+  text-decoration: none;
+  color:rgb(231, 145, 87)
+}
+
+.signature a:hover {
+  text-decoration: dotted;
+  color:rgb(168, 121, 78)
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
